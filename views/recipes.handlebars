@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/recipes.css">
+
+        <!-- Google Fonts: Raleway -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Line Awesome: (https://icons8.com/line-awesome) -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <title>Recipes</title>
+    </head>
+    <body>
+        <!-- Custom Collapsable  Navbar - Bootstrap Base - Translucent - Allows Carousel Behind It -->
+        <nav class="navbar navbar-expand-md sticky-top pr-0">
+            <!-- Brand -->
+            <span class="navbar-brand mb-0 h1">
+                <!-- Brand Heart Icon: (https://jam-icons.com/, heart-f) -->
+
+                {{!-- <a href="http://flip2.engr.oregonstate.edu:11734/"> --}}
+                <a href="https://keto-love.herokuapp.com/">
+                    Keto<sup><span class="brand-icon" data-jam="heart-f"></span></sup>
+                </a>
+            </span> 
+                
+            <!-- Custom Toggler - Bootstrap Base - New Icon - New Size - New Color -->
+            <button class="navbar-toggler custom-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <!-- Font Awesome Menu: (https://icons8.com/line-awesome)-->
+                <i id="custom-toggler-image" class="las la-bars"></i>
+            </button>
+
+            <!-- Custom Navbar Items - Bootstrap Base - New Size - New Font - New Color -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        {{!-- <a href="http://flip2.engr.oregonstate.edu:11734/"> --}}
+                        <a href="https://keto-love.herokuapp.com/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="benefits" class="nav-link">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="risks" class="nav-link">Risks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recipes" class="nav-link">Recipes</a>
+                    </li>
+                </ul>
+            </div>  
+        </nav>
+
+        <section id="recipes" class="mb-5">
+            <div class="container">
+                <div class="row mt-4">
+      
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-pot-roast/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-pot-roast/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-pot-roast.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Pot Roast</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 218</li>
+                                        <li class="card-list-item">Net Carbs: 3g</li>
+                                        <li class="card-list-item">Carbs: 4g</li>
+                                        <li class="card-list-item">Fat: 13g</li>
+                                        <li class="card-list-item">Protein: 22g</li>
+                                        <li class="card-list-item">Fiber: 1g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Pot-Roast.pdf" download="Headbangers-Kitchen-Keto-Pot-Roast.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-pot-roast/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/lD7q1cDMtS0" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-pancakes/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-pancakes/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-pancakes.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Pancakes</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 161</li>
+                                        <li class="card-list-item">Net Carbs: 2g</li>
+                                        <li class="card-list-item">Carbs: 4g</li>
+                                        <li class="card-list-item">Fat: 14g</li>
+                                        <li class="card-list-item">Protein: 7g</li>
+                                        <li class="card-list-item">Fiber: 2g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Pancakes.pdf" download="Headbangers-Kitchen-Keto-Pancakes.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-pancakes/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/EsxVuf3rosk" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-ribs/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-ribs/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-ribs.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Ribs</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 455</li>
+                                        <li class="card-list-item">Net Carbs: .8g</li>
+                                        <li class="card-list-item">Carbs: 1.3g</li>
+                                        <li class="card-list-item">Fat: 31g</li>
+                                        <li class="card-list-item">Protein: 33.2g</li>
+                                        <li class="card-list-item">Fiber: .5g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Ribs.pdf" download="Headbangers-Kitchen-Keto-Ribs.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-ribs/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/zloDF_dti6Q" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-double-chocolate-chip-cookies/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-double-chocolate-chip-cookies/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-double-chocolate-chip-cookies.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Double Chocolate Chip Cookies</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 186</li>
+                                        <li class="card-list-item">Net Carbs: 3g</li>
+                                        <li class="card-list-item">Carbs: 8g</li>
+                                        <li class="card-list-item">Fat: 16g</li>
+                                        <li class="card-list-item">Protein: 7g</li>
+                                        <li class="card-list-item">Fiber: 5g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Double-Chocolate-Chip-Cookies.pdf" download="Headbangers-Kitchen-Keto-Double-Chocolate-Chip-Cookies.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-double-chocolate-chip-cookies/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/ZKWn-9GUPcI" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-chicken-salad-2/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-chicken-salad-2/" target="_blank">
+                                <img class="card-img-top" src="/img/chicken-salad.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Chicken Salad</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 372</li>
+                                        <li class="card-list-item">Net Carbs: 1g</li>
+                                        <li class="card-list-item">Carbs: 3g</li>
+                                        <li class="card-list-item">Fat: 25g</li>
+                                        <li class="card-list-item">Protein: 33g</li>
+                                        <li class="card-list-item">Fiber: 2g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Chicken-Salad.pdf" download="Headbangers-Kitchen-Keto-Chicken-Salad.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-chicken-salad-2/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/yl3WOdFDUl4" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-dalgona-coffee/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-dalgona-coffee/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-dalgona-coffee.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Dalgona Coffee</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 30</li>
+                                        <li class="card-list-item">Net Carbs: 3g</li>
+                                        <li class="card-list-item">Carbs: 2g</li>
+                                        <li class="card-list-item">Fat: 2g</li>
+                                        <li class="card-list-item">Protein: 1g</li>
+                                        <li class="card-list-item">Fiber: 1g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Dalgona-Coffee.pdf" download="Headbangers-Kitchen-Keto-Dalgona-Coffee.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-dalgona-coffee/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/kSUR5ZqYg8c" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-fish-curry/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-fish-curry/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-fish-curry.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Fish Curry</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 431</li>
+                                        <li class="card-list-item">Net Carbs: 6.1g</li>
+                                        <li class="card-list-item">Carbs: 9.3g</li>
+                                        <li class="card-list-item">Fat: 15g</li>
+                                        <li class="card-list-item">Protein: 30.1g</li>
+                                        <li class="card-list-item">Fiber: 3.1g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Fish-Curry.pdf" download="Headbangers-Kitchen-Keto-Fish-Curry.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-fish-curry/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/iLhCVMSlIZE" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card"> 
+                            <!-- Source: https://headbangerskitchen.com/recipe/keto-green-beans/ -->
+                            <a href="https://headbangerskitchen.com/recipe/keto-green-beans/" target="_blank">
+                                <img class="card-img-top" src="/img/keto-green-beans.jpg">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Keto Green Beans</h5>
+                                <div class="card-text d-flex flex-row justify-content-center">
+                                    <ul class="card-list">
+                                        <li class="card-list-item">Colories: 172</li>
+                                        <li class="card-list-item">Net Carbs: 3g</li>
+                                        <li class="card-list-item">Carbs: 5g</li>
+                                        <li class="card-list-item">Fat: 15g</li>
+                                        <li class="card-list-item">Protein: 4g</li>
+                                        <li class="card-list-item">Fiber: 2g</li>
+                                    </ul>
+                                </div>                            
+                            
+                            </div>
+                            <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                                <!-- Jam Icons: download, link, youtube -->
+                                <a id="download-btn" href="/files/recipes/Headbangers-Kitchen-Keto-Green-Beans.pdf" download="Headbangers-Kitchen-Keto-Green-Beans.pdf"><span class="download-btn-icon" data-jam="download"></span></a>
+                                <!-- <span id="download-btn" data-jam="download"></span> -->
+                                <a id="link-btn" href="https://headbangerskitchen.com/recipe/keto-green-beans/" target="_blank"><span class="link-btn-icon" data-jam="link"></span></a>
+                                <a id="youtube-btn" href="https://youtu.be/Rl0ClKH13M0" target="_blank"><span class="youtube-btn-icon" data-jam="youtube"></span></a>
+                                <!-- Line Awesome: las la-heart, lar la-heart -->
+                                <i id="like-btn" class="lar la-heart" onclick="toggleLikeIcon(this), toggleLikeColor('like-btn')"></i>
+                            </div>
+                        </div>
+                    </div>
+ 
+ 
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        {{!-- News Letter Form Post --}}
+        <section id="news-letter" class="d-flex justify-content-center">
+            
+            <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST" target="_blank">
+                <fieldset class="px-4 pb-0 mb-5">
+                    <legend id="legendGroup" class="text-center px-5 py-3 mb-3">
+                        <h5 class="m-0">Subscribe now and never miss another recipe!</h5>
+                    </legend>
+                    <div class="d-flex justify-content-center">
+                        <input type="email" name="email_input" id="email_input" placeholder="please enter email" class="mr-2" required>
+                        {{!-- Bootstrap Button, Custom Styling --}}
+                        <button id="submit-btn" class="btn btn-secondary">Submit</button>
+                    </div>
+
+                    
+                    <div class="dropdown m-0">
+                        <button id="privacy-policy-dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Privacy Policy
+                        </button>
+                        <div class="dropdown-menu p-0 text-muted">
+                            {{!-- Fake Terms and Conditions Source: https://www.termsandconditionsgenerator.com/ --}}
+                            <div id="scroll-box" class="p-3">
+                                
+                                <h2><strong> Terms and Conditions</strong></h2> 
+
+                                <p class="citation tc">Fake terms and conditions generated on <a href="https://www.termsandconditionsgenerator.com/" target="_blank">https://www.termsandconditionsgenerator.com/</a></p>
+
+
+                                <p>Welcome to Keto Love!</p>
+
+                                <p>These terms and conditions outline the rules and regulations for the use of Keto Love's Website, located at ketolove.com.</p>
+
+                                <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Keto Love if you do not agree to take all of the terms and conditions stated on this page. Our Terms and Conditions were created with the help of the <a href="https://www.termsandconditionsgenerator.com">Terms And Conditions Generator</a> and the <a href="https://www.privacypolicyonline.com/terms-conditions-generator/">Free Terms & Conditions Generator</a>.</p>
+
+                                <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+
+                                <h3><strong>Cookies</strong></h3>
+
+                                <p>We employ the use of cookies. By accessing Keto Love, you agreed to use cookies in agreement with the Keto Love's Privacy Policy.</p>
+
+                                <p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+
+                                <h3><strong>License</strong></h3>
+
+                                <p>Unless otherwise stated, Keto Love and/or its licensors own the intellectual property rights for all material on Keto Love. All intellectual property rights are reserved. You may access this from Keto Love for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+                                <p>You must not:</p>
+                                <ul>
+                                    <li>Republish material from Keto Love</li>
+                                    <li>Sell, rent or sub-license material from Keto Love</li>
+                                    <li>Reproduce, duplicate or copy material from Keto Love</li>
+                                    <li>Redistribute content from Keto Love</li>
+                                </ul>
+
+                                <p>This Agreement shall begin on the date hereof.</p>
+
+                                <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Keto Love does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Keto Love,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Keto Love shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+
+                                <p>Keto Love reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+
+                                <p>You warrant and represent that:</p>
+
+                                <ul>
+                                    <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
+                                    <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
+                                    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
+                                    <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+                                </ul>
+
+                                <p>You hereby grant Keto Love a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+
+                                <h3><strong>Hyperlinking to our Content</strong></h3>
+
+                                <p>The following organizations may link to our Website without prior written approval:</p>
+
+                                <ul>
+                                    <li>Government agencies;</li>
+                                    <li>Search engines;</li>
+                                    <li>News organizations;</li>
+                                    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+                                    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+                                </ul>
+
+                                <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
+
+                                <p>We may consider and approve other link requests from the following types of organizations:</p>
+
+                                <ul>
+                                    <li>commonly-known consumer and/or business information sources;</li>
+                                    <li>dot.com community sites;</li>
+                                    <li>associations or other groups representing charities;</li>
+                                    <li>online directory distributors;</li>
+                                    <li>internet portals;</li>
+                                    <li>accounting, law and consulting firms; and</li>
+                                    <li>educational institutions and trade associations.</li>
+                                </ul>
+
+                                <p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Keto Love; and (d) the link is in the context of general resource information.</p>
+
+                                <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
+
+                                <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Keto Love. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
+
+                                <p>Approved organizations may hyperlink to our Website as follows:</p>
+
+                                <ul>
+                                    <li>By use of our corporate name; or</li>
+                                    <li>By use of the uniform resource locator being linked to; or</li>
+                                    <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
+                                </ul>
+
+                                <p>No use of Keto Love's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+
+                                <h3><strong>iFrames</strong></h3>
+
+                                <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+
+                                <h3><strong>Content Liability</strong></h3>
+
+                                <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+
+                                <h3><strong>Your Privacy</strong></h3>
+
+                                <p>Please read Privacy Policy</p>
+
+                                <h3><strong>Reservation of Rights</strong></h3>
+
+                                <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+
+                                <h3><strong>Removal of links from our website</strong></h3>
+
+                                <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+
+                                <p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+
+                                <h3><strong>Disclaimer</strong></h3>
+
+                                <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+
+                                <ul>
+                                    <li>limit or exclude our or your liability for death or personal injury;</li>
+                                    <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+                                    <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+                                    <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+                                </ul>
+
+                                <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+
+                                <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>Some example text that's free-flowing within the dropdown menu.
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer container-fluid vw-100 pt-3">
+            <!-- Heart Icon Citation -->
+            <div class="row footer justify-content-end align-items-end pr-2">
+                <p class="citation m-0">
+                    All recipes and photos belong to Sahil Makhija, creator of Head Bangers Kitchen, <a href="https://headbangerskitchen.com/" target="_blank">https://headbangerskitchen.com/.</a>
+                </p>
+            </div>   
+
+            <div class="row footer justify-content-end align-items-end pr-2">
+                <p class="citation m-0">
+                     I am not affiliated with Sahil Makhija or Head <Bangers Kitchen, I just like the recipes!
+                </p>
+            </div>
+
+            <!-- Heart Icon Citation -->
+            <div class="row footer justify-content-end align-items-end pr-2">
+                <p class="citation m-0">
+                    Jam Icons: heart-f, download, link, youtube, <a href="https://jam-icons.com/" target="_blank">https://jam-icons.com/</a>
+                    , Accessed 22 May 2020
+                </p>
+            </div>
+
+            <!-- Footer: Menu Icon Citation -->
+            <div class="row footer justify-content-end align-items-end pr-2">
+                <p class="citation m-0">
+                    Line Awesome Icons: las la-heart, lar la-heart, menu <a href="https://icons8.com/line-awesome" target="_blank">https://icons8.com/line-awesome</a>
+                    , Accessed 22 May 2020
+                </p>
+            </div>
+        </section>
+
+        <!-- Jam Icons (https://jam-icons.com/) -->
+        <script src="https://unpkg.com/jam-icons/js/jam.min.js"></script>
+
+        <!-- JavaScript For Bootstrap -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- Custom JavaScript -->
+        <script src="/js/script.js"></script>
+    </body>
+</html>

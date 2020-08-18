@@ -1,0 +1,216 @@
+body {
+    background-color: white;
+    font-family: 'raleway', sans-serif;
+    font-weight: 400;
+}
+
+/* Navbar */
+.navbar {
+    background: black;
+    opacity: .85;
+}
+
+.navbar.scrolled {
+    /* background: #A9A9A9; */
+    background: black;
+    transition: background 750ms;
+    opacity: .55;
+}
+/* Navbar Brand */
+.navbar-brand a:link, .navbar-brand a:visited {
+    color: white;
+    font-family: 'raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: .75; 
+}
+
+.brand-icon {
+    fill: red;
+    width: 25%;
+    height: 25%;
+}
+
+.navbar-brand a:hover {
+    opacity: .85;
+    text-decoration: none;
+}
+
+.navbar-brand a:active, .nav {
+    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
+    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
+    text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
+}
+
+/* Navbar Links */
+#navbarNav .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: .60;
+    margin-right: .5rem;
+}
+
+
+#navbarNav .nav-link.active {
+    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
+    opacity: .75;
+    font-weight: 400;
+}
+
+#navbarNav .nav-link.active:hover {
+    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
+    opacity: .95;
+}
+
+#navbarNav .nav-link:hover {
+    opacity: .85;
+}
+
+#navbarNav .nav-link:active {
+    /* REAL :active */
+
+    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
+    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
+    text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
+}
+
+/* Navbar Toggler */
+#custom-toggler-image {
+    color: white;
+    font-size: 24px;
+    opacity: .60;
+    margin-right: 20px
+}
+
+.custom-toggler {
+    border: 0;
+}
+
+.custom-toggler:focus {
+    outline: 0;
+}
+
+#custom-toggler-image:hover {
+    opacity: .85;
+}
+
+#custom-toggler-image:active {
+    /* Couldn't use another opacity edit on top of :hover */
+    /* Text Shadow - 0 offset, 0 blur, tricked it into another opacity: 1 setting */
+    text-shadow: 0 0 0px white, 0 0 0px white;
+}
+
+/* Cards */
+
+.card {
+    border-color: lightgray;
+    padding: 0;
+}
+
+.card-body {
+    background-color: rgba(0,0,0,.05);
+    padding-bottom: 0px;
+}
+
+.card-footer {
+    background-color: rgba(0,0,0,.10);
+}
+
+#download-btn, #link-btn, #youtube-btn, #like-btn {
+    opacity: .65;
+}
+
+#download-btn:hover, #link-btn:hover, #youtube-btn:hover {
+    fill: rgb(255,0,0);
+
+}
+
+#like-btn:hover {
+    color: rgb(255,0,0); /* like-btn --> Line Awesome Format */
+}
+
+#download-btn:active, #link-btn:active, #youtube-btn:active, #like-btn:active {
+    opacity: 1;
+}
+
+
+/* Newsletter */
+fieldset {
+    border: 2px solid rgba(0, 0, 0, .85);
+    border-radius: 8px;
+}
+
+legend {
+    background-color: #000;
+    opacity: .85; 
+    color: #fff;
+    padding: 3px 6px;
+}
+
+input {
+    width: 60%;
+}
+
+#submit-btn.btn-secondary {
+    background-color:rgb(0,0,0,.85);
+}
+
+#submit-btn.btn-secondary:hover {
+    background-color: rgb(0,0,0,.75);
+}
+
+#privacy-policy-dropdown.btn-secondary {
+    color: rgb(0,0,0,.65);
+    background-color: rgb(0,0,0,0);
+    font-size: .8rem;
+    border: none;
+}
+
+#privacy-policy-dropdown:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.dropdown-menu {
+    width: 100%;
+    font-size: .6rem;
+}
+
+#scroll-box {
+    color:  black;
+    height: 100px;
+    overflow: auto;
+}   
+
+/* Citations */
+.citation {
+    color: white;
+    font-size: .6rem;
+    font-style: italic;
+    opacity: .50;
+}
+
+.citation a:link, .citation a:visited {
+    color: white;
+}
+
+.carousel-indicators.citation {
+    font-size: .7rem;
+}
+
+.citation.tc {
+    color: black;
+    font-size: .6rem;
+}
+.citation.tc a:link, .citation.tc a:visited {
+    color: black;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #545454;
+    height: 1rem;
+}
+
