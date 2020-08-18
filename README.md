@@ -1,4 +1,4 @@
-## Keto Love: Spring 2020 Web Dev Project
+## Spring 2020 Web Dev Project: Keto Love
 
 
 ### Technology Stack
