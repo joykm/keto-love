@@ -1,4 +1,5 @@
-## Spring-2020-Web-Dev-CS290
+## keto-love
+##### Spring 2020 Web Dev Project
 
 ### Technology Stack
 
