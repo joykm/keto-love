@@ -1,0 +1,130 @@
+body {
+    background-color:white;
+    font-family: 'raleway', sans-serif;
+    font-weight: 400;
+}
+
+/* Navbar */
+.navbar.scrolled {
+    background: black;
+    transition: background 750ms;
+    opacity: .85;
+}
+
+/* Navbar Brand */
+.navbar-brand a:link, .navbar-brand a:visited {
+    color: white;
+    font-family: 'raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: .75; 
+}
+
+.brand-icon {
+    fill: red;
+    width: 25%;
+    height: 25%;
+}
+
+.navbar-brand a:hover {
+    opacity: .85;
+    text-decoration: none;
+}
+
+.navbar-brand a:active, .nav {
+    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
+    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
+    text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
+}
+
+
+/* Navbar Links */
+#navbarNav .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: .60;
+    margin-right: .5rem;
+}
+
+
+#navbarNav .nav-link.active {
+    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
+    opacity: .75;
+    font-weight: 400;
+}
+
+#navbarNav .nav-link.active:hover {
+    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
+    opacity: .95;
+}
+
+#navbarNav .nav-link:hover {
+    opacity: .85;
+}
+
+#navbarNav .nav-link:active {
+    /* REAL :active */
+
+    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
+    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
+    text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
+}
+
+/* Navbar Toggler */
+#custom-toggler-image {
+    color: white;
+    font-size: 24px;
+    opacity: .60;
+    margin-right: 20px
+}
+
+.custom-toggler {
+    border: 0;
+}
+
+.custom-toggler:focus {
+    outline: 0;
+}
+
+#custom-toggler-image:hover {
+    opacity: .85;
+}
+
+#custom-toggler-image:active {
+    /* Couldn't use another opacity edit on top of :hover */
+    /* Text Shadow - 0 offset, 0 blur, tricked it into another opacity: 1 setting */
+    text-shadow: 0 0 0px white, 0 0 0px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Citations */
+.citation {
+    color: white;
+    font-size: .6rem;
+    font-style: italic;
+    opacity: .50;
+}
+
+.citation a:link, .citation a:visited {
+    color: white;
+}
+
+.carousel-indicators.citation {
+    font-size: .7rem;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #545454;
+    height: 1rem;
+}
