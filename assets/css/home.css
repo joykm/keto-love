@@ -4,11 +4,25 @@ body {
     font-weight: 400;
 }
 
-/* Navbar */
-.navbar.scrolled {
+/* Transparent Navbar - Not working with 4k Monitor */
+/* Transparent Implementation didn't include a .navbar */
+/*.navbar.scrolled {
     background: black;
     transition: background 750ms;
     opacity: .85;
+}*/
+
+/*  Navbar */
+.navbar {
+    background: black;
+    opacity: .85;
+}
+
+.navbar.scrolled {
+    /* background: #A9A9A9; */
+    background: black;
+    transition: background 750ms;
+    opacity: .55;
 }
 
 /* Navbar Brand */
