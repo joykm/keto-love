@@ -1,5 +1,5 @@
-## keto-love
-##### Spring 2020 Web Dev Project
+## Keto Love: Spring 2020 Web Dev Project
+
 
 ### Technology Stack
 
