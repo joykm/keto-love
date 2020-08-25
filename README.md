@@ -1,4 +1,4 @@
-## Web Dev Project: Keto Love
+## CS-291-Keto Love
 
 
 ### Technology Stack
