@@ -1,4 +1,4 @@
-## CS-291-Keto Love
+## Keto Love
 
 
 ### Technology Stack
