@@ -1,5 +1,4 @@
 body {
-    /* background-color: rgb(0,0,0,.50); */
     font-family: 'raleway', sans-serif;
     font-weight: 400;
 }
@@ -38,8 +37,6 @@ body {
 }
 
 .navbar-brand a:active, .nav {
-    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
-    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
     text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
 }
 
@@ -55,13 +52,11 @@ body {
 
 
 #navbarNav .nav-link.active {
-    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
     opacity: .75;
     font-weight: 400;
 }
 
 #navbarNav .nav-link.active:hover {
-    /* NOT :active! This is class(active) --> an unfortunate bootstrap name */
     opacity: .95;
 }
 
@@ -70,10 +65,6 @@ body {
 }
 
 #navbarNav .nav-link:active {
-    /* REAL :active */
-
-    /* Couldn't use opacity attribute again (used on hover) --> used rgb opacity instead */
-    /* Couldn't change font-size or weight without messing with spacing --> used text shadow to emulate effect */
     text-shadow: 0 0 0px rgb(255,255,255, .85), 0 0 0px rgb(255,255,255,.65);
 }
 
@@ -98,20 +89,12 @@ body {
 }
 
 #custom-toggler-image:active {
-    /* Couldn't use another opacity edit on top of :hover */
-    /* Text Shadow - 0 offset, 0 blur, tricked it into another opacity: 1 setting */
     text-shadow: 0 0 0px white, 0 0 0px white;
 }
 
 /* Content */
-.benefit-list {
-    /* background-color: #b2806c; */
-
-}
-
 .benefit-img{
     height: 50%;
-    /* background-color: rgb(0,0,0,.50); */
 }
 
 
