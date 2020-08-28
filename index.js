@@ -47,5 +47,3 @@ app.listen(app.get('port'), function(){
       `Express started on http://${process.env.HOSTNAME}:${app.get('port')}; press Ctrl-C to terminate.`
       );
 });
-
-// app.listen(process.env.PORT || <your port number>);
